@@ -22,7 +22,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch, reactive } from 'vue'
+import { onMounted, onUnmounted, watch, reactive } from 'vue'
+
+defineProps<{
+  name: string;
+}>();
 
 interface TamagotchiState {
   hunger: number;
@@ -39,7 +43,6 @@ const mood = {
 }
 
 // Define reactive variables
-const name = ref<string>('Tama');
 const tamagotchiState = reactive<TamagotchiState>({});
 
 // Method to feed Tamagotchi
