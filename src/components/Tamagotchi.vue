@@ -73,15 +73,15 @@ watch(
     console.log(hunger, happiness, tamagotchiState);
     
     if (hunger <= 5 && happiness > 90) {
-      tamagotchiState.mood = '^_^';
+      tamagotchiState.mood = mood.happy;
     } else if (hunger > 5 && hunger <= 10 && happiness > 80) {
-      tamagotchiState.mood = 'o_o';
+      tamagotchiState.mood = mood.irritated;
     } else if (hunger > 10 && hunger <= 20 && happiness > 70) {
-      tamagotchiState.mood = '(O_O)';
+      tamagotchiState.mood = mood.concerned;
     } else if (hunger > 20 && happiness > 60) {
-      tamagotchiState.mood = '(>_<)';
+      tamagotchiState.mood = mood.angry;
     } else if (hunger > 30 && happiness > 50) {
-      tamagotchiState.mood = '(x_x)';
+      tamagotchiState.mood = mood.exhausted;
   }
 },
 { deep: true }
